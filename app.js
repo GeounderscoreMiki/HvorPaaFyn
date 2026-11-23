@@ -62,7 +62,7 @@ async function showScores() {
       const r = d.data();
       const t = r.createdAt?.toDate ? r.createdAt.toDate() : null;
       const row = [
-        i + 1, r.name, formatTime(r.seconds),
+        i + 1, r.name, formatTime(r.seconds), r.lives == null ? '–' : `❤️ ${r.lives}`,
         t ? t.toLocaleDateString('da-DK', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '–',
         t ? t.toLocaleTimeString('da-DK', { hour: '2-digit', minute: '2-digit' }) : '–',
       ];
@@ -234,7 +234,7 @@ async function win() {
   show('won');
   bump('completed');
   if (db) {
-    try { await addDoc(collection(db, 'hpf_scores'), { name: playerName, seconds, createdAt: serverTimestamp() }); } catch (e) { console.warn(e); }
+    try { await addDoc(collection(db, 'hpf_scores'), { name: playerName, seconds, lives: game.lives, createdAt: serverTimestamp() }); } catch (e) { console.warn(e); }
   }
   loadStats();
 }
