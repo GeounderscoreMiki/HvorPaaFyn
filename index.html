@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hvor på Fyn?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topbar" hidden>
+    <div>👤 <span id="player"></span></div>
+    <div>Liv: <span id="lives"></span></div>
+    <div>Rigtige i træk: <span id="progress"></span></div>
+    <div>⏱ Spørgsmål: <span id="timer"></span></div>
+    <div>🕒 Samlet: <span id="total"></span></div>
+  </header>
+
+  <main>
+    <section id="screen-start">
+      <div class="hero noimg">
+        <svg class="emblem" viewBox="0 0 1042 1079" role="img" aria-label="Geocaching-logo">
+          <g fill="#d9f5b4">
+          <path d="M915 245C905 205 885 175 850 150C760 90 660 45 540 40C420 38 320 50 260 100C170 170 100 280 65 400C35 500 40 620 80 710C120 800 200 860 280 905C360 950 450 965 540 962C640 958 720 950 800 905C890 850 960 740 972 600C975 530 960 460 935 355L915 432L915 440C925 520 925 580 905 650C880 740 820 820 740 870C680 905 610 925 540 928C440 930 360 905 290 870C220 830 170 790 140 735C100 660 85 570 85 500C85 420 105 340 150 260C200 180 270 105 340 85C420 70 520 72 600 90C690 110 760 160 800 210C815 230 830 260 848 285L860 278C885 268 905 260 915 245Z"/>
+          <path d="M390 178L445 176C465 240 470 330 510 435L520 445C560 520 615 610 628 745C625 760 610 770 597 778C585 745 565 700 555 640C540 570 515 520 495 485C440 380 400 270 390 178Z"/>
+          <path d="M162 553C230 515 330 495 490 450L515 438C600 400 760 370 930 347L945 360C948 380 925 420 915 430C860 435 780 436 700 442C640 448 590 458 535 475L500 490C420 520 360 535 330 550C290 580 250 612 205 616C190 612 175 570 162 553Z"/>
+          </g>
+        </svg>
+        <p class="kicker">Geocaching-spil</p>
+        <h1>Hvor på Fyn?</h1>
+        <p class="tagline">Kender du Fyns byer og kommuner? Bevis det og find skatten. 🧭</p>
+      </div>
+
+      <div class="card">
+        <h2>Sådan spiller du</h2>
+        <ul class="rules">
+          <li><span>🏘️</span>Du får vist navnet på en <strong>tilfældig by på Fyn</strong>.</li>
+          <li><span>📍</span>Tryk på den <strong>kommune</strong> på kortet, du tror byen hører til.</li>
+          <li><span>🎯</span>Du skal have <strong>10 rigtige i træk</strong> – én i hver af Fyns 10 kommuner.</li>
+          <li><span>⏱️</span>Du har <strong>1 minut og 30 sekunder</strong> pr. spørgsmål. Løber tiden ud, tæller det som et forkert svar.</li>
+          <li><span>❤️</span>Du har <strong>3 liv</strong>. Et forkert svar koster et liv, og du må starte forfra med en ny række byer.</li>
+          <li><span>💀</span>Mister du alle 3 liv, er spillet slut, og du må starte et helt nyt spil.</li>
+          <li><span>🏆</span>Din samlede tid løber hele vejen og bruges på scoreboardet.</li>
+          <li><span>🧰</span>Klarer du alle 10 uden at lave fejl, får du <strong>koordinatet til cachen</strong>!</li>
+        </ul>
+        <form id="start-form">
+          <label for="name">Vælg brugernavn til scoreboardet:</label>
+          <input id="name" maxlength="20" autocomplete="off" placeholder="Dit geocaching-navn" required>
+          <button type="submit">Start spillet</button>
+        </form>
+        <p><a href="#" id="to-scores-start">🏆 Se scoreboard</a></p>
+      </div>
+    </section>
+
+    <section id="screen-game" hidden>
+      <div class="card">
+        <h2>Hvilken kommune ligger denne by i?</h2>
+        <p id="town" class="clue"></p>
+        <p id="feedback" role="status"></p>
+        <p class="done-list">Gennemført: <span id="done-list">ingen endnu</span></p>
+      </div>
+      <div class="mapwrap">
+        <svg id="map" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kort over Fyns kommuner"></svg>
+        <div class="watermark" aria-hidden="true"><span>Made by</span><span>Geo_Miki</span></div>
+      </div>
+    </section>
+
+    <section id="screen-lost" class="card" hidden>
+      <h2>Du løb tør for liv 😢</h2>
+      <p>Spillet er slut. Start et helt nyt spil og prøv igen.</p>
+      <button id="retry">Nyt spil</button>
+    </section>
+
+    <section id="screen-won" class="card" hidden>
+      <h2>🎉 Tillykke – du har gennemført spillet!</h2>
+      <p>Din samlede tid: <strong id="won-time"></strong></p>
+      <p>Koordinatet til den fysiske geocache er:</p>
+      <p id="final-coord"></p>
+      <button id="to-scores-won">🏆 Se det online scoreboard</button>
+    </section>
+
+    <section id="screen-scores" class="card" hidden>
+      <h2>Scoreboard</h2>
+      <table>
+        <thead><tr><th>#</th><th>Brugernavn</th><th>Samlet tid</th><th>Dato</th><th>Klokkeslæt</th></tr></thead>
+        <tbody id="score-body"></tbody>
+      </table>
+      <button id="back">Tilbage</button>
+    </section>
+  </main>
+
+  <footer id="stats"></footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

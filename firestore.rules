@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- Hvor på Fyn? ----
+    // Scoreboard: alle kan læse og tilføje en score, men ikke ændre eller slette.
+    match /hpf_scores/{id} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['name', 'seconds', 'createdAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 1
+        && request.resource.data.name.size() <= 20
+        && request.resource.data.seconds is int
+        && request.resource.data.seconds >= 20
+        && request.resource.data.seconds <= 86400;
+      allow update, delete: if false;
+    }
+
+    // Tæller: kan kun tælles op med 1 ad gangen.
+    match /hpf_stats/counters {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['attempts', 'completed'])
+        && request.resource.data.get('attempts', 0) <= 1
+        && request.resource.data.get('completed', 0) <= 1;
+      allow update: if request.resource.data.keys().hasOnly(['attempts', 'completed'])
+        && request.resource.data.get('attempts', 0) - resource.data.get('attempts', 0) in [0, 1]
+        && request.resource.data.get('completed', 0) - resource.data.get('completed', 0) in [0, 1];
+    }
+
+    // ---- Det gamle spil (Fynsspil) – uændret ----
+    match /scores/{id} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['name', 'seconds', 'lives', 'createdAt'])
+        && request.resource.data.lives is int
+        && request.resource.data.lives >= 1
+        && request.resource.data.lives <= 10
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 1
+        && request.resource.data.name.size() <= 20
+        && request.resource.data.seconds is int
+        && request.resource.data.seconds >= 20
+        && request.resource.data.seconds <= 86400;
+      allow update, delete: if false;
+    }
+
+    match /stats/counters {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['attempts', 'completed'])
+        && request.resource.data.get('attempts', 0) <= 1
+        && request.resource.data.get('completed', 0) <= 1;
+      allow update: if request.resource.data.keys().hasOnly(['attempts', 'completed'])
+        && request.resource.data.get('attempts', 0) - resource.data.get('attempts', 0) in [0, 1]
+        && request.resource.data.get('completed', 0) - resource.data.get('completed', 0) in [0, 1];
+    }
+  }
+}
