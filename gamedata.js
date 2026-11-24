@@ -1,6 +1,6 @@
 // Genereret af build.mjs – rediger secret/spil.json og kør "node build.mjs" igen.
 export const iterations = 150000;
-export const salt = 'Y3zH9Ayj9jTJLw0vI2lgOg==';
+export const salt = 'S3INTBByb63yvb8BXMG4WA==';
 export const groups = [
   {
     "towns": [
@@ -13,9 +13,16 @@ export const groups = [
       "Tarup",
       "Bellinge",
       "Fraugde",
-      "Allesø"
+      "Allesø",
+      "Hjallese",
+      "Næsby",
+      "Åsum",
+      "Tornbjerg",
+      "Vollsmose",
+      "Lumby",
+      "Sankt Klemens"
     ],
-    "check": "yNQ28TUp6f6i7yenbVdYM7D8jYdjSzgo2vqSnRYABPc="
+    "check": "YG/XBOj2jxOWlPVl4bJM0qWzoSBDqs7V6Kxi/wMU64Q="
   },
   {
     "towns": [
@@ -25,9 +32,11 @@ export const groups = [
       "Tommerup",
       "Vissenbjerg",
       "Ebberup",
-      "Aarup"
+      "Aarup",
+      "Tommerup Stationsby",
+      "Barløse"
     ],
-    "check": "gKiynmQx9GZEIIFRomp08fG3CioRrf3/ifS+q5eaQW8="
+    "check": "DoDMouBM/fksYDbLj90SSZXsm9SSCxjpiiuLlxQEsEo="
   },
   {
     "towns": [
@@ -38,9 +47,15 @@ export const groups = [
       "Korinth",
       "Horne",
       "Millinge",
-      "Brahetrolleborg"
+      "Brahetrolleborg",
+      "Ryslinge",
+      "Håstrup",
+      "Svanninge",
+      "Vester Hæsinge",
+      "Årup",
+      "Diernæs"
     ],
-    "check": "KOdXA+DR/1W31D9MbPWafTYtNr77WA4f9cXJRWnZaIk="
+    "check": "BqGWmVGZ1E479/68sEeGbogRfIPEKl/w5LawwIRHNJ4="
   },
   {
     "towns": [
@@ -51,9 +66,13 @@ export const groups = [
       "Mesinge",
       "Marslev",
       "Martofte",
-      "Drigstrup"
+      "Drigstrup",
+      "Revninge",
+      "Dalby",
+      "Ladby",
+      "Birkende"
     ],
-    "check": "sKEGKpu9/W7t9TTGObGIEPp9by6QeJ9Iy/tq7hZBIWA="
+    "check": "cFQlAEDBbDB/FJtZ6V7srzPVtCcx/6wJGS+uw8ziGGY="
   },
   {
     "towns": [
@@ -63,9 +82,14 @@ export const groups = [
       "Bagenkop",
       "Lohals",
       "Simmerbølle",
-      "Ristinge"
+      "Ristinge",
+      "Spodsbjerg",
+      "Snøde",
+      "Longelse",
+      "Tullebølle",
+      "Fodslette"
     ],
-    "check": "85PSEGf9KHKEnS3eaAV0X+vAKTrQ9qiLb6vEH9cXZgI="
+    "check": "BJ1eYTqrvUZl1a46pqQ5NRVt/P3qEg0vRIoEeL4x+aI="
   },
   {
     "towns": [
@@ -75,9 +99,13 @@ export const groups = [
       "Nørre Aaby",
       "Brenderup",
       "Harndrup",
-      "Gelsted"
+      "Gelsted",
+      "Føns",
+      "Kauslunde",
+      "Balslev",
+      "Vedelshave"
     ],
-    "check": "ZIyZougY0Ti7yZNCkGjfcJ6YjJaosPSK+g/D7wR5Cqo="
+    "check": "bHk7gbA+D6wWwJgKz6xZAkjC1IxLiG4PfT3tXJ9qNVo="
   },
   {
     "towns": [
@@ -87,9 +115,11 @@ export const groups = [
       "Skamby",
       "Morud",
       "Veflinge",
-      "Hårslev"
+      "Hårslev",
+      "Roerslev",
+      "Krogsbølle"
     ],
-    "check": "M1nNbIj5Jh7gHoFVwQdrrqPYw3jxAN8nT3IGTv11fuY="
+    "check": "mxUkLz01jVerzMBq7o8WPwjjCODjVM6PZV4ba23I6SE="
   },
   {
     "towns": [
@@ -98,9 +128,11 @@ export const groups = [
       "Ørbæk",
       "Refsvindinge",
       "Aunslev",
-      "Frørup"
+      "Frørup",
+      "Svindinge",
+      "Vindinge"
     ],
-    "check": "9T9kVpw9jc9AfevRRGxqSTFEZ3KZUK7uS9I5uLwvy6U="
+    "check": "I5A9x9zt8zmXqA4YUeQ/L/HTN8JtKTys2/1ARQyStEY="
   },
   {
     "towns": [
@@ -112,9 +144,14 @@ export const groups = [
       "Kværndrup",
       "Vester Skerninge",
       "Gudme",
-      "Gudbjerg"
+      "Gudbjerg",
+      "Hesselager",
+      "Oure",
+      "Lundeborg",
+      "Vindeby",
+      "Landet"
     ],
-    "check": "VNbqoHOeV1JeD/VSOwT/sIz1lVN+tqwtbfuDc/6ZxKE="
+    "check": "9C9qeCvmjUzPFChwOLDTxYAanPk1Q0/kAFd7UQOz8u0="
   },
   {
     "towns": [
@@ -122,9 +159,12 @@ export const groups = [
       "Marstal",
       "Søby",
       "Rise",
-      "Bregninge"
+      "Bregninge",
+      "Ommel",
+      "Tranderup",
+      "Dunkær"
     ],
-    "check": "MSoBw6lA0t6S8820Yl68Th6c2rG6OdPYQM80g/FoxPg="
+    "check": "nN0nFmkB3Gaq6esh2Ly9JOWzXO5Jarl1IEeFp4bIQ3U="
   }
 ];
-export const vault = { iv: 'iu0Nt2l+6seAOGbb', data: 'sDaD6ClWDBq/Aa6FE3eQmLXLxAJ9hAjVjrJyOnKRrDutXz3m3kqbCA9fe3k=' };
+export const vault = { iv: 'T6FkbDgFdUpoE9q5', data: 'kYNK4Z0DZX/lL8wkwYNXCyoDUlNnjNb8KtzK3WSFURcsYiyrETNu6P68dZM=' };
