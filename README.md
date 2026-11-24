@@ -1,6 +1,6 @@
 # Hvor på Fyn? – geocaching-spil
 
-Spilleren får navnet på en tilfældig fynsk by og skal trykke på den rigtige kommune på kortet. 10 rigtige i træk (én i hver kommune), 10 liv, 1:30 pr. spørgsmål. Scoreboard gemmes i Firebase (Firestore).
+Spilleren får navnet på en tilfældig fynsk by og skal trykke på den rigtige kommune på kortet. 10 rigtige i træk (én i hver kommune), 10 liv, 1 minut pr. spørgsmål. Scoreboard gemmes i Firebase (Firestore).
 
 ## Opsætning
 1. **Koordinat og byer:** Åbn `secret/spil.json`, skriv den rigtige koordinat i `finalCoordinate` og ret evt. byerne. Kør derefter `node build.mjs`, som laver `gamedata.js` (svar som hash, koordinat krypteret).
