@@ -1,6 +1,6 @@
 // Genereret af build.mjs – rediger secret/spil.json og kør "node build.mjs" igen.
 export const iterations = 150000;
-export const salt = 'r/YOkZxKFU9lyYkUnWb3Iw==';
+export const salt = '+rqK32OgmPOWC8EOldRvOw==';
 export const groups = [
   {
     "towns": [
@@ -15,7 +15,7 @@ export const groups = [
       "Fraugde",
       "Allesø"
     ],
-    "check": "cM9yuyUUUN0pjeAHqZC8yUHLDk6hlnzGreasvZ+OAfk="
+    "check": "djtOY1m1UNB+qSsrFs69Xic1+m3YCjJ/O3UQ0dkb7BI="
   },
   {
     "towns": [
@@ -27,7 +27,7 @@ export const groups = [
       "Ebberup",
       "Aarup"
     ],
-    "check": "k7c56sIBy1wht1Q3/OO7prO9SkSACKG7I2ZHYCEMeHk="
+    "check": "U66NT/QEvC9jLacDWyzmoaR2g5FQslpE2QKDiWYMZio="
   },
   {
     "towns": [
@@ -40,7 +40,7 @@ export const groups = [
       "Millinge",
       "Brahetrolleborg"
     ],
-    "check": "Fl1nNrJal+sq0ZTA/53EefEJb1z6yddQwAWvboHOw8o="
+    "check": "5ApQQijZ/tJRSq0rRVyrM2LI7Htj+SxszNvKg3026K4="
   },
   {
     "towns": [
@@ -53,7 +53,7 @@ export const groups = [
       "Martofte",
       "Drigstrup"
     ],
-    "check": "2SNn9Sfy87wEJZzSmSu7tIiFY7yrDiEWZLsc+o2rZB0="
+    "check": "weYUs8e5+jcEg9wcEk3I0N2T1KP+PMdHJJG2RFX/rrk="
   },
   {
     "towns": [
@@ -65,7 +65,7 @@ export const groups = [
       "Simmerbølle",
       "Ristinge"
     ],
-    "check": "QdsFtBTZJponEj29qzyK+wq5TX8EWK/l5NDZ9qKbk+k="
+    "check": "2wdSDcrT1JiK2BNruY+JckUCpOPmi++ged2cVD4LZYw="
   },
   {
     "towns": [
@@ -74,9 +74,10 @@ export const groups = [
       "Nørre Aaby",
       "Brenderup",
       "Harndrup",
-      "Gelsted"
+      "Gelsted",
+      "Føns"
     ],
-    "check": "3TTSmsbgrjPO2SbbzZZUvOta6ZRd+wdYCX7pYpJwiEo="
+    "check": "f6mfiucjKaNl25FiPcJcJB2osZe2medUCBfXokGMMQ8="
   },
   {
     "towns": [
@@ -88,7 +89,7 @@ export const groups = [
       "Veflinge",
       "Hårslev"
     ],
-    "check": "5JOktkZH4WnuwBwy6ZsV2s7xHMNGccmhKVr+bDKTPnQ="
+    "check": "9kW7jHUUwhlJ9o1GzhqME8oZTpG/NYCYK14hGjOMb7w="
   },
   {
     "towns": [
@@ -97,9 +98,10 @@ export const groups = [
       "Ørbæk",
       "Refsvindinge",
       "Aunslev",
-      "Frørup"
+      "Frørup",
+      "Svindinge"
     ],
-    "check": "Pdj2vHkqFegbRqzsyGEXJJgt4ajInjuNyh62sPcYbY0="
+    "check": "W7gKo/ObrgLv8J0Au2PSGO8IaYbZ7Fs6URXxU3jKr14="
   },
   {
     "towns": [
@@ -113,7 +115,7 @@ export const groups = [
       "Gudme",
       "Gudbjerg"
     ],
-    "check": "M5suhi8ZBHaf2BOp+klKELPhZETI+7R8VPFKldfex3k="
+    "check": "qp+jcK4CoKWLnUyEjIKZKMUI20uqWmyU7a2ZM1YSZBM="
   },
   {
     "towns": [
@@ -125,7 +127,7 @@ export const groups = [
       "Dunkær",
       "Borgnæs"
     ],
-    "check": "6VrU7WLGEaZ3iK38yeFx+JmBHa+4bhvIeEmaCJbdEWQ="
+    "check": "oTYBNEVfbLZw4TVDC/7cVw81BC4YAGl8RHI2YP/EG/o="
   }
 ];
-export const vault = { iv: '17kGYpEKwvB0Y5Qc', data: '2iYtKUGSfoSoCFpBl84lccBxft91ozTUY16JYMNx38A40nfA976zh1d2Se8=' };
+export const vault = { iv: '6mywR8WCUVTSVMsJ', data: 'HQ1jskqpuprdYxIVxD48m448ZGjHY8ClquHsrFhJAd/seBtkCuNY37PxCwM=' };
